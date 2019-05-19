@@ -1,4 +1,5 @@
-package sample;
+package Models;
+
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +11,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/Index.fxml"));
+        primaryStage.setTitle("Download Manager");
+        primaryStage.setScene(new Scene(root, 600  , 400));
         primaryStage.show();
     }
 
