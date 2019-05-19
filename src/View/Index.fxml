@@ -2,28 +2,46 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controls.Index">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="700.0">
          <children>
-            <SplitPane dividerPositions="0.29797979797979796" layoutY="68.0" prefHeight="330.0" prefWidth="598.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="160.0" />
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="328.0" prefWidth="402.0" />
-              </items>
-            </SplitPane>
             <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="Add download">
                <font>
                   <Font size="10.0" />
                </font></Button>
-            <Button layoutX="112.0" layoutY="16.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="80.0" text="stop" />
-            <Button layoutX="207.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="resum" />
-            <Button layoutX="299.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="delet" />
-            <Button layoutX="396.0" layoutY="15.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="time" />
-            <Button layoutX="494.0" layoutY="15.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="setting" />
+            <Button layoutX="159.0" layoutY="16.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="80.0" text="stop" />
+            <Button layoutX="292.0" layoutY="15.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="resum" />
+            <Button layoutX="432.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="delet" />
+            <Button layoutX="571.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="time" />
+            <Button layoutX="708.0" layoutY="15.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="setting" />
+            <SplitPane dividerPositions="0.29797979797979796" layoutX="-2.0" layoutY="76.0" prefHeight="504.0" prefWidth="840.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TreeView fx:id="treeView" layoutY="-5.0" prefHeight="512.0" prefWidth="246.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutX="-1.0" layoutY="-1.0" prefHeight="504.0" prefWidth="584.0">
+                          <columns>
+                            <TableColumn prefWidth="279.0" text="Name" />
+                            <TableColumn text="Size" />
+                              <TableColumn minWidth="0.0" prefWidth="127.0" text="Download Speed" />
+                              <TableColumn minWidth="6.0" prefWidth="95.0" text="Time Left " />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
          </children></AnchorPane>
   </items>
 </SplitPane>
