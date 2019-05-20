@@ -1,6 +1,5 @@
 package Controls;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -20,13 +19,13 @@ public class Addurl {
         if (verifiedUrl != null) {
             Index.Appendurl(verifiedUrl);
         } else {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setTitle("Warning alert");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning alert");
 
-                // alert.setHeaderText("Battery Status:");
-                alert.setContentText("The battery charge is low!");
+            // alert.setHeaderText("Battery Status:");
+            alert.setContentText("The battery charge is low!");
 
-                alert.showAndWait();
+            alert.showAndWait();
         }
     }
 
@@ -46,7 +45,7 @@ public class Addurl {
         // Make sure URL specifies a file.
         if (verifiedUrl.getFile().length() < 2)
             return null;
-
+        Addurl.getScene().getWindow().hide();
         return verifiedUrl;
     }
 

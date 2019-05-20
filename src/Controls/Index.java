@@ -57,13 +57,7 @@ public class Index implements Initializable {
 //        a.getChildren().add(Q);
         Treeitemlist.add(Q);
 
-
-//        if (!Categoryname.equals("")) {
-//            TreeItem<String> Add = new TreeItem<>(Categoryname);
-//            Treeitemlist.add(Add);
-//        }
-        for (String x : Categoryname)
-        {
+        for (String x : Categoryname) {
             TreeItem<String> Add = new TreeItem<>(x);
             Treeitemlist.add(Add);
         }
@@ -80,14 +74,16 @@ public class Index implements Initializable {
         Stage Stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/View/Addurl.fxml"));
         Stage.setTitle("Download Manager");
-        Stage.setScene(new Scene(root, 600  , 55));
+        Stage.setScene(new Scene(root, 600, 55));
         Stage.show();
 
     }
-    @FXML
-    private void Rightclickontree(){
 
+    @FXML
+    private void Rightclickontree() {
+            Addtocategory();
     }
+
     @FXML
     private void Addtocategory() {
 
@@ -105,7 +101,7 @@ public class Index implements Initializable {
         AddToTree(Whattoaddtotree);
     }
 
-    public static void Appendurl (URL url){
+    public static void Appendurl(URL url) {
         Urllist.add(url);
         System.out.println(url);
         System.out.println(Urllist.size());
