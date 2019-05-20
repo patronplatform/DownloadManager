@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -12,25 +15,21 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="700.0">
          <children>
-            <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="Add download">
-               <font>
-                  <Font size="10.0" />
-               </font></Button>
-            <Button layoutX="159.0" layoutY="16.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="80.0" text="stop" />
-            <Button layoutX="292.0" layoutY="15.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="resum" />
-            <Button layoutX="432.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="delet" />
-            <Button layoutX="571.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="time" />
-            <Button layoutX="708.0" layoutY="15.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="setting" />
-            <SplitPane dividerPositions="0.29797979797979796" layoutX="-2.0" layoutY="76.0" prefHeight="504.0" prefWidth="840.0">
+            <Button layoutX="163.0" layoutY="44.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="80.0" text="stop" />
+            <Button layoutX="305.0" layoutY="41.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="resum" />
+            <Button layoutX="432.0" layoutY="41.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="delet" />
+            <Button layoutX="575.0" layoutY="41.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="time" />
+            <Button layoutX="719.0" layoutY="41.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="80.0" text="setting" />
+            <SplitPane dividerPositions="0.29797979797979796" layoutX="-2.0" layoutY="92.0" prefHeight="488.0" prefWidth="840.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <TreeView fx:id="treeView" layoutY="-5.0" prefHeight="512.0" prefWidth="246.0" />
+                        <TreeView fx:id="treeView" layoutY="-4.0" prefHeight="494.0" prefWidth="246.0" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <TableView layoutX="-1.0" layoutY="-1.0" prefHeight="504.0" prefWidth="584.0">
+                        <TableView layoutX="-1.0" layoutY="-1.0" prefHeight="486.0" prefWidth="584.0">
                           <columns>
                             <TableColumn prefWidth="279.0" text="Name" />
                             <TableColumn text="Size" />
@@ -42,6 +41,37 @@
                   </AnchorPane>
               </items>
             </SplitPane>
+            <MenuBar layoutX="-2.0" prefHeight="25.0" prefWidth="840.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Task">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#Showurlbox" text="Add new download" />
+                        <MenuItem mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Setting">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Redownload" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Download">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Find" />
+                        <MenuItem mnemonicParsing="false" text="Delete all Complete" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <Button layoutX="22.0" layoutY="43.0" mnemonicParsing="false" onAction="#Showurlbox" prefHeight="44.0" prefWidth="80.0" text="Add download">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
   </items>
 </SplitPane>
